@@ -12,7 +12,6 @@ from prefect import flow, task
 from prefect.artifacts import create_markdown_artifact
 from datetime import date
 from prefect_email import EmailServerCredentials, email_send_message
-import click
 
 
 
@@ -141,8 +140,6 @@ def example_email_send_message_flow(email_address: str):
         )
 
 
-@click.command()
-@click.option("--send_to", help="Address to send an email to")
 @flow
 def homework_q5_flow(
     train_path: str = "./Week3/homework/data/green_tripdata_2023-02.parquet",
@@ -165,7 +162,7 @@ def homework_q5_flow(
     train_best_model(X_train, X_val, y_train, y_val, dv)
 
     #send an email notification
-    example_email_send_message_flow(str(send_to))
+    example_email_send_message_flow("kilictun@mef.edu.tr")
 
 
 if __name__ == "__main__":
