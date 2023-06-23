@@ -162,7 +162,7 @@ def homework_q5_flow(
     train_best_model(X_train, X_val, y_train, y_val, dv)
 
     #send an email notification
-    example_email_send_message_flow("kilictun@mef.edu.tr")
+    example_email_send_message_flow("EMAIL_ADDRESS")
 
 
 if __name__ == "__main__":
