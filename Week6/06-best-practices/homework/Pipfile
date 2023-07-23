@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+scikit-learn = "==1.2.2"
+pandas = "*"
+pyarrow = "*"
+s3fs = "*"
+awscli = "*"
+boto3 = "*"
+
+[dev-packages]
+pytest = "*"
+deepdiff = "*"
+
+[requires]
+python_version = "3.11"
